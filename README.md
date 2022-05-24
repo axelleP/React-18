@@ -11,7 +11,7 @@
     ## Notions
     - hook useContext, useParams, useNavigate :
     *useContext : allows to access a parent property (prop) directly from the child instead of passing it to other parents of this child
-    - we use the character ` en jsx to concatenate a string and a variable. ex : <Link to={`/survey/${next}`}>Suivant</Link>
+    - we use the character ` en jsx to concatenate a string and a variable. ex : "<Link to={`/survey/${next}`}>Suivant</Link>"
     - JS :
     *fetch : native method for making API calls (alternative : axios for ex.)
     - CSS : use variable
@@ -34,10 +34,10 @@
     - PropTypes (not used in this project) : allows to type the variables, set a default value, make a value mandatory
 
     Tests :
-    Note : le meilleur moyen de tester un hook est de tester un composant qui utilise ce hook.
+    Note : The best way to test a hook is to test a component that uses that hook.
     - Jest : basic tool for unit testing. Write the test and run the command : npm run test
-    Commande pour savoir à quel point notre app est courverte (testée) : npm test -- --coverage
-    Cette commande permet de savoir dans quel fichier et à quelle ligne il manque un test.
+    Order to know how well our app is covered (tested) : npm test -- --coverage
+    This command allows you to know in which file and on which line a test is missing.
     - React Testing Library : for testing our components
     - recommended library : Cypress
 </pre>
