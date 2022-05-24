@@ -11,7 +11,7 @@
     ## Notions
     - hook useContext, useParams, useNavigate :
     *useContext : allows to access a parent property (prop) directly from the child instead of passing it to other parents of this child
-    - we use the character ` en jsx to concatenate a string and a variable. ex : "<Link to={`/survey/${next}`}>Suivant</Link>"
+    - we use the character ` en jsx to concatenate a string and a variable. ex : `<Link to={`/survey/${next}`}>Suivant</Link>`
     - JS :
     *fetch : native method for making API calls (alternative : axios for ex.)
     - CSS : use variable
