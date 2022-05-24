@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Training React 2
+I used :
+- react 18.0.0
+- react-router-dom 6.3.0 : manages page routing. Ex. hooks : BrowserRouter, Routes, Route, Link, useParams
+- react-scripts: ^5.0.1
+- react-bootstrap: ^2.3.0
+- msw: ^0.41.0 : Mock Service Worker. The mook intercepts API calls made by components during tests
+- styled-components: ^5.3.5 : CSS in a JS component. Useful for the CSS under condition
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Notions
+- hook useContext, useParams, useNavigate : 
+*useContext : allows to access a parent property (prop) directly from the child instead of passing it to other parents of this child
+- we use the character ` en jsx to concatenate a string and a variable. ex : <Link to={`/survey/${next}`}>Suivant</Link>
+- JS :
+*fetch : native method for making API calls (alternative : axios for ex.)
+- CSS : use variable
+Ex :
+:root {
+  --purple-color: #5843e4;
+}
 
-## Available Scripts
+.link:hover {
+    color: var(--purple-color);
+}
 
-In the project directory, you can run:
+## Tools
+# Extension
+- ESLint (not used for this project) : indicates errors in the code from the text editor
+- React Developer Tools for chrome (not used for this project)
 
-### `npm start`
+# Libraries
+- Prettier (not used in this project) : formats the code
+- PropTypes (not used in this project) : allows to type the variables, set a default value, make a value mandatory
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Tests :
+Note : le meilleur moyen de tester un hook est de tester un composant qui utilise ce hook.
+- Jest : basic tool for unit testing. Write the test and run the command : npm run test
+Commande pour savoir à quel point notre app est courverte (testée) : npm test -- --coverage
+Cette commande permet de savoir dans quel fichier et à quelle ligne il manque un test.
+- React Testing Library : for testing our components
+- recommended library : Cypress

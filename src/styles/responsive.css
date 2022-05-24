@@ -1,0 +1,34 @@
+@media screen and (max-width:600px) {/* media pour les écrans de 0 à 600px */
+    #cards {
+        margin-right: 0rem!important;
+        margin-left: 0rem!important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 710px) {/* media pour les écrans entre 600px et 710px */
+    #cards {
+        margin-right: 3rem!important;
+        margin-left: 3rem!important;
+    }
+}
+
+@media (min-width: 710px) and (max-width: 767px) {
+    #cards {
+        margin-right: 4rem!important;
+        margin-left: 4rem!important;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+    #cards {
+        margin-right: 0rem!important;
+        margin-left: 0rem!important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1420px) {
+    #cards {
+        margin-right: 5rem!important;
+        margin-left: 5rem!important;
+    }
+}

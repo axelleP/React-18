@@ -1,0 +1,17 @@
+nav a {
+    color: var(--grey-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--purple-color);
+}
+
+.selected {
+    color: var(--purple-color);
+}
+
+.bg-purple {
+    background-color: var(--purple-color);
+    color: white;
+}

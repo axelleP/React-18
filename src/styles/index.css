@@ -1,0 +1,38 @@
+/* 
+    variables réutilisables dans tout le code côté CSS
+    Attention : il faut aussi mettre à jour colors.jsx !
+*/
+:root {
+  --purple-color: #5843e4;
+  --grey-color: grey;
+}
+
+body {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* ex : liens Suivantes et Précédentes */
+.link {
+    color: var(--grey-color);
+}
+
+.link:hover {
+    color: var(--purple-color);
+}
+
+.colored-text {
+    color: var(--purple-color);
+}
+
+/* CSS du loader */
+.spinner-border {
+    color : var(--purple-color);
+}
+
+.underline-purple {
+    text-decoration: underline var(--purple-color);
+}
