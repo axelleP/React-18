@@ -28,7 +28,7 @@ function Freelances() {
             
             {/* data-testid : on s'en sert pour nos tests dans Freelances.test.js */}
             {isLoading ? (
-                <div data-testid="loader" className="mt-5 d-flex justify-content-center">/* loader : îcone de chargement */
+                <div data-testid="loader" className="mt-5 d-flex justify-content-center">{/* loader : îcone de chargement */}
                     <div className="spinner-border justify-content-center" role="status"></div>
                 </div>
             ) : (
