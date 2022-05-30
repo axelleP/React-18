@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { SurveyContext } from '../../utils/context/context'
 import { useFetch } from '../../utils/hooks/hooks'
+import EmptyList from '../../components/EmptyList/EmptyList';
 import '../../styles/Results.css';
 
 //formate le titre d'un métier
@@ -45,6 +46,11 @@ function Results() {
                 <span className="col col-sm-2 col-md-3 col-lg-4"></span>
             </div>
         )
+    }
+    
+    //si l'utilisateur n'a coché aucun Oui
+    if (resultsData && resultsData.length === 0) {
+        return <EmptyList />
     }
     
     return isLoading ? (
