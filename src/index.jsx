@@ -17,6 +17,8 @@ import Home from './pages/Home/Home';
 import Survey from './pages/Survey/Survey';
 import Results from './pages/Results/Results';
 import Freelances from './pages/Freelances/Freelances';
+import Freelance from './pages/Freelance/Freelance';
+import Freelance2 from './pages/Freelance/Freelance2';//pour les composants class
 import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 
@@ -33,6 +35,8 @@ root.render(
                         <Route path="survey/:questionNumber" element={<Survey />} />
                         <Route path="results" element={<Results />} />
                         <Route path="freelances" element={<Freelances />} />
+                        <Route path="freelance/:id" element={<Freelance />} />
+                        <Route path="freelance2/:id" render={(props) => <Freelance2 {...props} />} element={<Freelance2 />} />
                         <Route path='*' element={<Error />} /> {/* gère les pages 404 */}
                     </Routes>
                     <Footer />

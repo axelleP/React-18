@@ -1,5 +1,6 @@
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card/Card2';
 import { useFetch } from '../../utils/hooks/hooks'
+import { Link } from 'react-router-dom'
 import '../../styles/Freelances.css'
 
 function Freelances() {
@@ -34,12 +35,13 @@ function Freelances() {
             ) : (
                 <div id="cards" className="row d-flex justify-content-center mt-5">
                     {freelancersList && freelancersList.map((freelance) => (
-                        <Card
-                            key={`${freelance.name}-${freelance.id}`}
-                            label={freelance.job}
-                            picture={freelance.picture}
-                            title={freelance.name}
-                        />
+                        <Link className="col-8 col-md-4 m-4 h5 wrapper text-decoration-none" to={`/freelance/${freelance.id}`} key={`${freelance.name}-${freelance.id}`}>
+                            <Card
+                                label={freelance.job}
+                                picture={freelance.picture}
+                                title={freelance.name}
+                            />
+                        </Link>
                     ))}
                 </div>
             )}
