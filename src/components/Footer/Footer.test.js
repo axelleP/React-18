@@ -1,14 +1,9 @@
 import Footer from './Footer.jsx'
-/* 
- * testing-library/react : librairie de tests unitaires et d'intégration
- * screen => body
-*/
 import { render, screen, fireEvent } from '@testing-library/react'
 import { ThemeProvider } from '../../utils/context/context.jsx'
 
 describe('Footer', () => {
     test('Should change theme', async () => {
-        //DOM
         render(
             <ThemeProvider>
                 <Footer />

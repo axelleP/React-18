@@ -1,13 +1,12 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { EmailContext } from '../../utils/context/context'
 
 function EmailInput() {
-    const [inputValue, setInputValue] = useState('')
+    const { updateEmail } = useContext(EmailContext)//var accessible car Footer est dans les balises EmailProvider dans index.jsx
     
     return (
         <span>
-            {inputValue}
-            &nbsp;&nbsp;
-            <input placeholder="Entrez votre email" onChange={(e) => setInputValue(e.target.value)} />
+            <input placeholder="Entrez votre email" onChange={(e) => updateEmail(e.target.value)} />      
         </span>
     )
 }

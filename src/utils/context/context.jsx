@@ -1,7 +1,8 @@
-//un contexte est un moyen de partager simplement les props entre les composants.
+//Utilité : un contexte est un moyen de partager simplement les props entre les composants
+
 import { createContext, useState} from 'react'
 
-//CONTEXTE THEME
+/* Thème du site */
 export const ThemeContext = createContext('light')
 
 export const ThemeProvider = ({ children }) => {
@@ -17,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
     )
 }
 
-//CONTEXTE SURVEY
+/* Questionnaire */
 export const SurveyContext = createContext([])
 
 export const SurveyProvider = ({ children }) => {
@@ -34,5 +35,25 @@ export const SurveyProvider = ({ children }) => {
         <SurveyContext.Provider value={{ answers, updateAnswers }}>
             {children}
         </SurveyContext.Provider>
+    )
+}
+
+/* Email rentré par l'utilisateur */
+export const EmailContext = createContext('')
+
+export const EmailProvider = ({ children }) => {
+    const [email, setEmail] = useState('')
+    const updateEmail = (inputEmail) => {
+        if (inputEmail !== '') {
+            setEmail('Récupération de votre email ! : ' + inputEmail)
+        } else {
+            setEmail('')
+        }
+    }
+ 
+    return (
+        <EmailContext.Provider value={{ email, updateEmail }}>
+            {children}
+        </EmailContext.Provider>
     )
 }

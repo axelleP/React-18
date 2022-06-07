@@ -2,11 +2,9 @@ import Card from './Card.jsx'
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from '../../utils/context/context.jsx'
 
-//Note : test <=> it
-
 describe('Card', () => {
     test('Should render title and image', async () => {
-        //ce que renvoi le DOM
+        //le DOM doit renvoyer ces props
         render(
             <ThemeProvider>
                 <Card

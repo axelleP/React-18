@@ -1,3 +1,4 @@
+//rque : je laisse délibérément l'utilisation du state ici pour avoir un exemple
 import {Component} from 'react'
 
 class EmailInput extends Component {

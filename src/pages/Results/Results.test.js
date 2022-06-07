@@ -1,28 +1,36 @@
+//On teste notre application avec Jest : https://jestjs.io/fr/docs/getting-started
+
 //Attention ! les fonctions à tester doivent avoir le mot "export" devant "function" pour pouvoir être utilisées ici !
-import Results, { formatJobList, formatFetchParams } from './Results.jsx'
+import Results, { formatJobTitle, formatFetchParams } from './Results.jsx'
 import { rest } from 'msw'//pour une API de type REST
 import { setupServer } from 'msw/node'//pour configurer un serveur
+/* 
+ * testing-library/react : librairie de tests unitaires et d'intégration
+ * screen : représente le body
+*/
 import { waitForElementToBeRemoved, screen } from '@testing-library/react'
-import { render } from '../../utils/test/test.js'//render personnalisé
+import { render } from '../../utils/test/test.js'//render personnalisé pour éviter d'écrire plusieurs fois le même code
 
 /* 
- * fonction describe(nomTests, fonction détaillant les tests) : on utilise pour englober plusieurs tests
- * fonction test(nomTest, fonction de test)
+ * fonction describe(nomTests, fonction détaillant les tests) : on l'utilise pour englober plusieurs tests
+ * 
+ * fonction test(nomTest, fonction de test) ou it(nomTest, fonction de test)
  * 
  * autres fonctions de Jest : toBe, toContain, ...
 */
-describe('La fonction formatJobList', () => {
+
+describe('La fonction formatJobTitle', () => {
     test('Ajoute une virgule au titre', () => {
-        const expectedState = 'titre2,'//exemple de valeur attendue
+        const expectedState = 'titre2, '//exemple de valeur attendue
         
-        //on s'attend (expect) à ce que le rendu de la fonction formatJobList(...) soit égale (toEqual) à notre var expectedState
-        //formatJobList('titre2', 3, 1)) : titre = titre2, longueur du tableau = 3 et position du titre = 1 donc 2eme position du tableau
-        expect(formatJobList('titre2', 3, 1)).toEqual(expectedState)
+        //on s'attend (expect) à ce que le rendu de la fonction formatJobTitle(...) soit égale (toEqual) à notre var expectedState
+        //formatJobTitle('titre2', 3, 1)) : titre = titre2, longueur du tableau = 3 et position du titre = 1 donc 2eme position du tableau
+        expect(formatJobTitle('titre2', 3, 1)).toEqual(expectedState)
     })
     
     test('N\'ajoute pas de virgule pour le dernier titre', () => {
         const expectedState = 'titre3'
-        expect(formatJobList('titre3', 3, 2)).toEqual(expectedState)//titre en dernière position du tableau
+        expect(formatJobTitle('titre3', 3, 2)).toEqual(expectedState)//titre en dernière position du tableau
     })
 })
 

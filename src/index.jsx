@@ -8,17 +8,17 @@ import './styles/index.css';
 import './styles/responsive.css';
 import DynamicStyle from './styles/DynamicStyle'//composant JS pour le CSS dynamique
 
-import { ThemeProvider, SurveyProvider } from './utils/context/context';//providers : theme et survey
+import { ThemeProvider, SurveyProvider, EmailProvider } from './utils/context/context';
 
 /* composants */
 //rque : si le nom du fichier est index.jsx on l'importe en indiquant que le nom du dossier ou il se situe
-import Header from './components/Header/Header';//menu
+import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Survey from './pages/Survey/Survey';
 import Results from './pages/Results/Results';
 import Freelances from './pages/Freelances/Freelances';
 import Freelance from './pages/Freelance/Freelance';
-import Freelance2 from './pages/Freelance/Freelance2';//pour les composants class
+import Freelance2 from './pages/Freelance/Freelance2';//exemple de composant class
 import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 
@@ -39,7 +39,9 @@ root.render(
                         <Route path="freelance2/:id" render={(props) => <Freelance2 {...props} />} element={<Freelance2 />} />
                         <Route path='*' element={<Error />} /> {/* gère les pages 404 */}
                     </Routes>
-                    <Footer />
+                    <EmailProvider>
+                        <Footer />
+                    </EmailProvider>
                 </SurveyProvider>
             </ThemeProvider>
         </BrowserRouter>

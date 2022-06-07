@@ -9,15 +9,16 @@
 
 /*
  * méthodes de cycle de vie :
- * componentDidMount() : appelé après le rendu du DOM
- * componentDidUpdate(prevProps, prevState) : appelé après une mise à jour des props ou du state
- * componentWillUnmount() : appelé quand le composant classe est retiré du DOM (ex: : display:none)
+ * - componentDidMount() : appelé après le rendu du DOM
+ * - componentDidUpdate(prevProps, prevState) : appelé après une mise à jour des props ou du state
+ * - componentWillUnmount() : appelé quand le composant classe est retiré du DOM (ex: : display:none)
  */
 
 import {Component} from 'react'
 import '../../styles/Card.css';
 
 class Card extends Component {
+    //initialisation
     constructor(props) {
         super(props)
         this.state = {}

@@ -28,6 +28,10 @@ body {
     color: var(--purple-color);
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 /* CSS du loader */
 .spinner-border {
     color : var(--purple-color);

@@ -4,7 +4,7 @@
 */
 const colors = {
     purpleColor: '#5843e4',
-    darkBlueColor: '#F9F9FC',
+    darkBlueColor: '#F9F9FC'
 }
 
 export default colors

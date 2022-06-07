@@ -21,13 +21,10 @@ const StyledDynamicStyle = createGlobalStyle`
 `
 
 function DynamicStyle() {
-    /*
-      récupère la state theme de ThemeContext
-      cette state est accessible car DynamicStyle est dans la balise ThemeProvider dans index.jsx
-    */
+    //var accessible car DynamicStyle est dans les balises ThemeProvider dans index.jsx
     const { theme } = useContext(ThemeContext)
     
-    //retourne le CSS global StyledDynamicStyle selon la prop isDarkMode (dépend de la state theme)
+    //retourne le CSS global StyledDynamicStyle selon la prop isDarkMode (dépend de theme)
     return <StyledDynamicStyle isDarkMode={theme === 'dark'} />
 }
 

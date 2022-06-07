@@ -1,8 +1,8 @@
 import Freelances from './Freelances.jsx'
-import { rest } from 'msw'//pour une API de type REST
-import { setupServer } from 'msw/node'//pour configurer un serveur
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
 import { waitForElementToBeRemoved, screen } from '@testing-library/react'
-import { render } from '../../utils/test/test.js'//render personnalisé
+import { render } from '../../utils/test/test.js'
 
 //exemple de données API renvoyées
 const freelancersMockedData = [
@@ -21,20 +21,17 @@ const freelancersMockedData = [
 //simulation du serveur d'API
 const server = setupServer(
     rest.get('http://localhost:8000/freelances', (req, res, ctx) => {
-        return res(ctx.json({ freelancersList: freelancersMockedData }))//les données retournées par l'API
+        return res(ctx.json({ freelancersList: freelancersMockedData }))
     })
 )
  
 
-beforeAll(() => server.listen())//avant les tests : lance la simulation
-afterEach(() => server.resetHandlers())//après chaques tests : réinitialisation des éventuels paramètres du serveur
-afterAll(() => server.close())//après les tests : ferme la simulation
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
 
 //tests
 test('Should render without crash', async () => {
-    //Attention à l'ordre du code ! D'abord le DOM et le await waitForElementToBeRemoved !
-    
-    //DOM
     render(<Freelances />)
     
     //attend que le loader disparaisse pour avoir le résultat de l'API
@@ -53,5 +50,3 @@ test('Should render without crash', async () => {
 //        expect(screen.getByText('Hermione Granger')).toBeTruthy()
 //    })
 })
-
-

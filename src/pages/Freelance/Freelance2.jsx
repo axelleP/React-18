@@ -20,7 +20,6 @@ const Availability = styled.div`
 `
 
 class Freelance2 extends Component {
-    //initialisation
     constructor(props) {
         super(props)
         this.state = {
@@ -28,7 +27,6 @@ class Freelance2 extends Component {
         }
     }
     
-    //fonction appelée après le chargement du DOM
     componentDidMount() {
         const { id } = this.props.match.params//récupère l'id passé dans l'url
 
@@ -41,7 +39,7 @@ class Freelance2 extends Component {
   
     render() {
         const { freelanceData } = this.state.freelanceData
-        const { id, } = freelanceData
+        const { id } = freelanceData
         
         return (
             <div className="row bg-grey align-items-center m-1 p-4">
