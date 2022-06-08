@@ -1,4 +1,4 @@
-import Card from '../../components/Card/Card2';
+import Card from '../../components/Card/Card';
 import { useFetch } from '../../utils/hooks/hooks'
 import { Link } from 'react-router-dom'
 import '../../styles/Freelances.css'

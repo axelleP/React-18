@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../../utils/context/context'
-import EmailInput from '../EmailInput/EmailInput2'
+import EmailInput from '../EmailInput/EmailInput'
 import { EmailContext } from '../../utils/context/context'
 
 function Footer() {
