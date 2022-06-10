@@ -67,12 +67,12 @@ Note : la meilleure façon de tester un hook est de tester un composant qui util
 - useContext et useState : [context.jsx](/src/utils/context/context.jsx)
 - useParams et useNavigate : [Survey.jsx](/src/pages/Survey/Survey.jsx)
 - hook personnalisé et useEffect : [hooks.jsx](/src/utils/hooks/hooks.jsx)
-- PropTypes [Card.jsx](/src/components/Card/Card.jsx)
+- PropTypes : [Card.jsx](/src/components/Card/Card.jsx)
 - Styled components : [Survey.jsx](/src/pages/Survey/Survey.jsx) et [button.jsx](/src/styles/button.jsx)
-- Link [Header.jsx](/src/components/Header/Header.jsx) 
-- routing des pages [index.jsx](/src/index.jsx)
+- Link : [Header.jsx](/src/components/Header/Header.jsx) 
+- routing des pages : [index.jsx](/src/index.jsx)
 - composant de type classe et non fonction : [Card2.jsx](/src/components/Card/Card2.jsx)
-- test [Results.test.js](/src/pages/Results/Results.test.js)
+- test : [Results.test.js](/src/pages/Results/Results.test.js)
 
 ## Définitions
 - composant : fonction qui retourne un élément React  
