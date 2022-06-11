@@ -20,7 +20,7 @@ Documentation React : [Bien démarrer - React](https://fr.reactjs.org/docs/getti
 - react-router-dom ^6.3.0 : gère le routage des pages (BrowserRouter, Routes, Route, Link, useParams)
 - react-bootstrap ^2.3.0
 - bootstrap ^5.1.3
-- prop-types ^15.8.1 : permet de définir des règles pour les props
+- prop-types ^15.8.1 : permet de définir des règles pour les props (ex : typer les variables, mettre une valeur par défaut ou encore rendre une valeur obligatoire)
 - msw ^0.41.0 : msw => Mock Service Worker. Le mook intercepte les appels API effectués par les composants lors des tests
 - styled-components ^5.3.5 : pour inclure du CSS dans un composant JS. Surtout utile pour du CSS sous conditions
 
@@ -48,10 +48,7 @@ Ex :
 ### Extensions :
 - ESLint : indique les erreurs dans le code depuis l'éditeur de texte
 - React Developer Tools : extension de navigateur pour aider au développement. [Installation](https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation)
-
-### Bibliothèques :
 - Prettier : formate le code dans l'éditeur de texte
-- PropTypes : permet par exemple de typer les variables, mettre une valeur par défaut ou encore rendre une valeur obligatoire
 
 ### Tests :  
 - Jest : outil de base pour les tests unitaires  
@@ -70,7 +67,7 @@ Note : la meilleure façon de tester un hook est de tester un composant qui util
 - PropTypes : [Card.jsx](/src/components/Card/Card.jsx)
 - Styled components : [Survey.jsx](/src/pages/Survey/Survey.jsx) et [button.jsx](/src/styles/button.jsx)
 - Link : [Header.jsx](/src/components/Header/Header.jsx) 
-- routing des pages : [index.jsx](/src/index.jsx)
+- routage des pages : [index.jsx](/src/index.jsx)
 - composant de type classe et non fonction : [Card2.jsx](/src/components/Card/Card2.jsx)
 - test : [Results.test.js](/src/pages/Results/Results.test.js)
 
