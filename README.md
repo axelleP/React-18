@@ -75,7 +75,7 @@ Note : la meilleure façon de tester un hook est de tester un composant qui util
 - composant : fonction qui retourne un élément React  
 Les composants permettent de découper toute l'interface utilisateur en éléments réutilisables (ex : header, footer, accueil, contact, ...)
 - prop :  propriété que l'on peut récupérer dans les paramètres d'un composant
-- hook : permet de créer du code réutilisable dans tous nos composants
+- hook personnalisé : permet de créer du code réutilisable dans tous nos composants
 
 [imgSize]: 1000
 
