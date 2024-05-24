@@ -1,8 +1,8 @@
-# <h1 align="center">👨‍💻 Formation React 18 👩‍💻</h1>
+# <h1 align="center">👨‍💻 React 18 👩‍💻</h1>
 
 </br></br>
 
-Apprentissage de React 18 par le tutoriel d'OpenClassrooms : [Créez une application React complète](https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete/7254167-tirez-le-maximum-de-ce-cours)
+Application du tutoriel d'OpenClassrooms : [Créez une application React complète](https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete/7254167-tirez-le-maximum-de-ce-cours)
 
 Documentation React : [Bien démarrer - React](https://fr.reactjs.org/docs/getting-started.html)
 
@@ -31,18 +31,6 @@ On indique quelles variables déclenchent useEffect dans ce qu'on appelle un tab
 - useContext : permet d'accéder à une prop d'un composant parent directement depuis un composant enfant au lieu de passer la prop à tous les composants parents du composant enfant
 - useParams : permet de récupérer les paramètres passés dans l'url
 - useNavigate : permet de rediriger un utilisateur sur une autre page
-
-## Compléments
-- map() : cette fonction permet de boucler sur un tableau et d'afficher directement ses éléments dans du HTML
-- on utilise le caractère \` en jsx pour concaténer une chaîne et une variable  
-</br>Ex : `<Link to={`\``/survey/${next}`\``}>Suivant</Link>`
-- JS :  
-  - fetch : méthode native pour faire des appels API (alternative : axios par ex.)
-- CSS :  
-  - utilisation de variable :  
-Ex :  
-`:root { --purple-color: #5843e4; }`  
-`.link:hover { color: var(--purple-color); }`
 
 ## Outils
 ### Extensions :
